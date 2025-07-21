@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Ryan Arjoon"/>
+        <meta name="description" content="Employee Directory to store Employee data, create account"/>
+        <meta name="viewport" content="width=device-width, inital-scale=1.0"/>
+        <link rel="stylesheet" href="index.css"/>
+        <title>Employee Directory - Create Account</title>
+    </head>
+
+    <body>
+        <header>
+
+        </header>
+
+        <main>
+            <div class="container">
+                <h1 class="title">Ryan's Employee Directory</h1>
+                <div class="form">
+                    <form id="create-account">
+                        <h2>Create Account</h2>
+                        
+                        <label for="text">Username:</label>
+                        <input type="text" id="username" placeholder="Enter Your Username"/>
+                        <div id="username-error" class="error-message"></div>
+                        
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Enter Your Password"/>
+                        <div id="password-error" class="error-message"></div>
+
+                        <label for="password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm Password"/>
+                        <div id="confirm-password-error" class="error-message"></div>
+
+                        <button type="submit">Create</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+
+        </footer>
+
+        <script src="js/create.js"></script>
+    </body>
+</html>
