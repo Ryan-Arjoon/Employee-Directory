@@ -97,3 +97,40 @@ body {
   font-size: 0.9em;
   margin-bottom: 2px;
 }
+
+/* Ensure header stays at the top */
+header {
+    background-color: #4B0082; /* calm purple */
+    padding: 1em 0;
+    position: fixed; /* make it stick to top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Push down the content so it's not hidden under the header */
+main {
+    margin-top: 80px; /* adjust this depending on your header height */
+}
+
+/* Style the nav list */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+/* Style the nav links */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
