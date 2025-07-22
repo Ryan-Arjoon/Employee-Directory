@@ -12,7 +12,13 @@
 
     <body>
         <header>
-
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="signin.html">Sign In</a></li>
+                    <li><a href="create.html">Create Account</a></li>
+                </ul>
+            </nav>
         </header>
 
         <main>
@@ -22,7 +28,7 @@
                     <form id="create-account">
                         <h2>Create Account</h2>
                         
-                        <label for="text">Username:</label>
+                        <label for="username">Username:</label>
                         <input type="text" id="username" placeholder="Enter Your Username"/>
                         <div id="username-error" class="error-message"></div>
                         
@@ -30,7 +36,7 @@
                         <input type="password" id="password" placeholder="Enter Your Password"/>
                         <div id="password-error" class="error-message"></div>
 
-                        <label for="password">Confirm Password:</label>
+                        <label for="confirm-password">Confirm Password:</label>
                         <input type="password" id="confirm-password" placeholder="Confirm Password"/>
                         <div id="confirm-password-error" class="error-message"></div>
 
