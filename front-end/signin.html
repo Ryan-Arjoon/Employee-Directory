@@ -25,15 +25,17 @@
             <div class="container">
                 <h1 class="title">Ryan's Employee Directory</h1>
                 <div class="form">
-                    <form>
+                    <form id="signin-form">
                         <h2>Sign In</h2>
                         
-                        <label for="text">Username:</label>
-                        <input type="text" placeholder="Enter Your Username"/>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" placeholder="Enter Your Username"/>
+                        <div id="username-error" class="error-message"></div>
                         
                         <label for="password">Password:</label>
-                        <input type="password" placeholder="Enter Your Password"/>
-
+                        <input type="password" id="password" placeholder="Enter Your Password"/>
+                        <div id="password-error" class="error-message"></div>
+                        
                         <button type="submit">Create</button>
                     </form>
                 </div>
@@ -43,5 +45,7 @@
         <footer>
 
         </footer>
+
+        <script src="js/signin.js"></script>
     </body>
 </html>
