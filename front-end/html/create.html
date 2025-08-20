@@ -4,12 +4,12 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="author" content="Ryan Arjoon"/>
-        <meta name="description" content="Employee Directory to store Employee data, signin"/>
+        <meta name="description" content="Employee Directory to store Employee data, create account"/>
         <meta name="viewport" content="width=device-width, inital-scale=1.0"/>
-        <link rel="stylesheet" href="index.css"/>
-        <title>Employee Directory - Signin</title>
+        <link rel="stylesheet" href="../index.css"/>
+        <title>Employee Directory - Create Account</title>
     </head>
-        
+
     <body>
         <header>
             <nav>
@@ -25,8 +25,8 @@
             <div class="container">
                 <h1 class="title">Ryan's Employee Directory</h1>
                 <div class="form">
-                    <form id="signin-form">
-                        <h2>Sign In</h2>
+                    <form id="create-account">
+                        <h2>Create Account</h2>
                         
                         <label for="username">Username:</label>
                         <input type="text" id="username" placeholder="Enter Your Username"/>
@@ -35,7 +35,11 @@
                         <label for="password">Password:</label>
                         <input type="password" id="password" placeholder="Enter Your Password"/>
                         <div id="password-error" class="error-message"></div>
-                        
+
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm Password"/>
+                        <div id="confirm-password-error" class="error-message"></div>
+
                         <button type="submit">Create</button>
                     </form>
                 </div>
@@ -46,6 +50,6 @@
 
         </footer>
 
-        <script src="js/signin.js"></script>
+        <script src="../js/create.js"></script>
     </body>
 </html>
