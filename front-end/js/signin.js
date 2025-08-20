@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!hasError) {
             form.reset();
+            window.location.href = "../html/home.html"
         }
     });
 });
