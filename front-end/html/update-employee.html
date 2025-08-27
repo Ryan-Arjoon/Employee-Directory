@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Ryan Arjoon"/>
+        <meta name="description" content="Employee Directory to remove or update employees"/>
+        <meta name="viewport" content="width=device-width, inital-scale=1.0"/>
+        <link rel="stylesheet" href="../index.css"/>
+        <title>Employee Directory - Update/Delete Employees</title>
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="../index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <h1 class="title">Update or Delete Employee</h1>
+
+                <div class="search-bar">
+                    <input type="text" id="search-employee" placeholder="Enter Employee ID to find employee...">
+                    <button class="btn">Search</button>
+                </div>
+
+                <section class="form">
+                    <form id="update-employee-form">
+                        <label for="emp-id">Employee ID:</label>
+                        <input type="text" id="emp-id" name="emp-id" value="EMP001" readonly />
+
+                        <label for="emp-name">Name:</label>
+                        <input type="text" id="emp-name" name="emp-name" value="Jane Doe" />
+
+                        <label for="emp-company">Company:</label>
+                        <input type="text" id="emp-company" name="emp-company" value="TechCorp" />
+
+                        <label for="emp-position">Position:</label>
+                        <input type="text" id="emp-position" name="emp-position" value="Software Engineer" />
+
+                        <label for="emp-salary">Salary:</label>
+                        <input type="number" id="emp-salary" name="emp-salary" value="75000" />
+
+                        <label for="emp-start">Start Date:</label>
+                        <input type="date" id="emp-start" name="emp-start" value="2022-03-15" />
+
+                        <div class="button-group">
+                            <button type="submit" class="btn">Update Employee</button>
+                            <button type="button" class="btn btn-create">Delete Employee</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+
+
+        </footer>
+    </body>
+
+</html>
