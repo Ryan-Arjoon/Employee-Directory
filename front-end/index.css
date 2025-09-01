@@ -98,23 +98,20 @@ body {
   margin-bottom: 2px;
 }
 
-/* Ensure header stays at the top */
 header {
-    background-color: #4B0082; /* calm purple */
+    background-color: #4B0082;
     padding: 1em 0;
-    position: fixed; /* make it stick to top */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
 }
 
-/* Push down the content so it's not hidden under the header */
 main {
-    margin-top: 80px; /* adjust this depending on your header height */
+    margin-top: 120px; 
 }
 
-/* Style the nav list */
 .nav-links {
     list-style: none;
     padding: 0;
@@ -124,7 +121,6 @@ main {
     gap: 2em;
 }
 
-/* Style the nav links */
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -138,21 +134,21 @@ main {
 .table-container {
     width: 90%;
     margin: 0 auto 40px auto;
-    overflow-x: auto; /* horizontal scroll for small screens */
+    overflow-x: auto;
 }
 
 #employee-table {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
-    table-layout: auto; /* flexible column widths */
+    table-layout: auto; 
 }
 
 #employee-table th {
     background-color: #007bff;
     color: white;
     padding: 10px;
-    white-space: nowrap; /* prevent text wrapping */
+    white-space: nowrap; 
 }
 
 #employee-table td {
