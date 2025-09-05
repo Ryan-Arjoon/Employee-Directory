@@ -13,6 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const empSalaryError = document.getElementById("emp-salary-error");
     const empStartError = document.getElementById("emp-start-error");
 
+    const successMessage = document.createElement("div");
+    successMessage.style.marginTop = "10px";
+    successMessage.style.transition = "opacity 0.5s";
+    form.appendChild(successMessage);
+
     form.addEventListener("submit", async function (event) {
         event.preventDefault();
         
@@ -24,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
         empPositionError.textContent = "";
         empSalaryError.textContent = "";
         empStartError.textContent = "";
+        successMessage.style.opacity = 0;
+        successMessage.textContent = "";
 
         const empId = empIdInput.value.trim();
         const empName = empNameInput.value;
@@ -64,6 +71,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (hasError) return;
 
-       
+        const token = localStorage.getItem("token");
+        try {
+            const response = await fetch('http://localhost:5000/api/employees', {
+                method: 'POST',
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    employeeId: empId,
+                    name: empName,
+                    position: empPosition,
+                    salary: Number(empSalary),
+                    startDate: empStart
+                })
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                successMessage.style.color = "red";
+                successMessage.style.opacity = 1;
+                successMessage.textContent = data.message || "Failed to add employee";
+                return;
+            }
+
+            successMessage.style.color = "green";
+            successMessage.style.opacity = 1;
+            successMessage.textContent = "Employee added successfully!";
+            form.reset();
+
+            setTimeout(() => {
+                successMessage.style.opacity = 0;
+            }, 3000);
+            form.reset();
+        } catch (err) {
+            console.error(err);
+            alert("An error occurred while adding employee.");
+        }
     });
 });
