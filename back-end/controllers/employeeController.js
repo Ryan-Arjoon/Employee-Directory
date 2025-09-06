@@ -30,6 +30,13 @@ const updateEmployee = async (req, res) => {
     const employee = await Employee.findOne({ employeeId: req.params.id, company: req.user.company });
     if (!employee) return res.status(404).json({ message: 'Employee not found' });
 
+    if (req.body.employeeId && req.body.employeeId !== req.params.id) {
+      const existing = await Employee.findOne({ employeeId: req.body.employeeId, company: req.user.company });
+      if (existing) {
+        return res.status(400).json({ message: 'Employee ID already exists' });
+      }
+    }
+
     Object.assign(employee, req.body);
     await employee.save();
     res.json(employee);
