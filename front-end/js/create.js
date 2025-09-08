@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // Clear previous error messages
     usernameError.textContent = "";
     passwordError.textContent = "";
     confirmPasswordError.textContent = "";
