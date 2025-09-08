@@ -40,6 +40,18 @@
                         <input type="password" id="confirm-password" placeholder="Confirm Password"/>
                         <div id="confirm-password-error" class="error-message"></div>
 
+                        <label for="company">Company:</label>
+                        <input type="text" id="company" placeholder="Enter Your Company"/>
+                        <div id="company-error" class="error-message"></div>
+
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Enter Your Name"/>
+                        <div id="name-error" class="error-message"></div>
+
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" placeholder="Enter Your Email"/>
+                        <div id="email-error" class="error-message"></div>
+
                         <button type="submit">Create</button>
                     </form>
                 </div>
@@ -49,7 +61,12 @@
         <footer>
 
         </footer>
-
+        
+        <script>
+            const NEXT_PUBLIC_API_URL = window.location.hostname === "localhost"
+                ? "http://localhost:5000"                  
+                : "https://employee-directory-o7f9.onrender.com"; 
+        </script>
         <script src="../js/create.js"></script>
     </body>
 </html>
