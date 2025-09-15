@@ -16,6 +16,9 @@ Run cd back-end <br>
 Run npm install <br>
 Run nodemon server.js (backend running on local host 5000)
 
+## Run Locally with Docker
+Work in Progress
+
 
 ## Local Selenium Testing
 Run pip install -r requirements.txt <br>
