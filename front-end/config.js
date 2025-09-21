@@ -12,5 +12,5 @@ if (window.location.hostname === "localhost" || window.location.hostname === "12
   env = environments.render;
 }
 
-window.env = env;
-console.log("Using API:", window.env.API_URL);
+window.CONFIG = env;
+console.log("Using API:", window.CONFIG.API_URL);
