@@ -1,7 +1,7 @@
 const environments = {
   local: { API_URL: "http://localhost:5000" },
   docker: { API_URL: "http://localhost:5000" },
-  render: { API_URL: "https://your-backend.onrender.com" }
+  render: { API_URL: "https://employee-directory-o7f9.onrender.com" }
 };
 
 let env;
