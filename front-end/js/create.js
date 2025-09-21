@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         company
       };
 
-      fetch(`${NEXT_PUBLIC_API_URL}/api/users/register`, {
+      fetch(`${window.CONFIG.API_URL}/api/users/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData),
