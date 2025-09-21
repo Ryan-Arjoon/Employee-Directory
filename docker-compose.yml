@@ -10,5 +10,3 @@ services:
       - "8080:80"
     depends_on:
       - backend
-    environment:
-      - NEXT_PUBLIC_API_URL=http://backend:3000
