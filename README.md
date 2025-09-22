@@ -18,7 +18,11 @@ Run npm install <br>
 Run nodemon server.js (backend running on local host 5000)
 
 ## Run Locally with Docker
-Work in Progress
+Run  ```docker-compose up --build``` (Builds Images and Runs Containers) <br>
+Or <br>
+Run ```docker compose build``` (Builds Images) <br>
+Use Docker Desktop or ```docker compose up``` to run the containers <br> 
+Access the docker frontend through local  host 8080, connects to backedn local host 5000
 
 
 ## Local Selenium Testing
