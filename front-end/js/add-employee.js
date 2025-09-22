@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const token = localStorage.getItem("token");
         try {
-            const response = await fetch(`${NEXT_PUBLIC_API_URL}/api/employees`, {
+            const response = await fetch(`${window.CONFIG.API_URL}/api/employees`, {
                 method: 'POST',
                 headers: {
                     "Authorization": `Bearer ${token}`,

@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            const res = await fetch(`${NEXT_PUBLIC_API_URL}/api/employees`, {
+            const res = await fetch(`${window.CONFIG.API_URL}/api/employees`, {
                 headers: { "Authorization": "Bearer " + localStorage.getItem("token") }
             });
             const employees = await res.json();
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (hasError) return;
 
         try {
-            const res = await fetch(`${NEXT_PUBLIC_API_URL}/api/employees/${empIdInput.value}`, {
+            const res = await fetch(`${window.CONFIG.API_URL}/api/employees/${empIdInput.value}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            const res = await fetch(`${NEXT_PUBLIC_API_URL}/api/employees/${formId}`, {
+            const res = await fetch(`${window.CONFIG.API_URL}/api/employees/${formId}`, {
                 method: "DELETE",
                 headers: { "Authorization": "Bearer " + localStorage.getItem("token") }
             });

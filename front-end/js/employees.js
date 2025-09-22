@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     try {
-        const res = await fetch(`${NEXT_PUBLIC_API_URL}/api/employees`, {
+        const res = await fetch(`${window.CONFIG.API_URL}/api/employees`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`,

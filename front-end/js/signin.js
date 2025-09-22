@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (hasError) return;
 
         try {
-            const response = await fetch(`${NEXT_PUBLIC_API_URL}/api/users/login`, {
+            const response = await fetch(`${window.CONFIG.API_URL}/api/users/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
